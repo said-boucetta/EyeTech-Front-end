@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import "./Connexion.css";
 
 const Connexion = () => {
-    return (
-        <div>
-            <h1>Connexion</h1>
-        </div>
-    )
-}
+  return <h1>Hello</h1>
+};
 
-export default Connexion
+export default Connexion;

@@ -195,7 +195,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url("../pages/bkContact.jpg");
+  background: url("../pages/newBk.png");
+  margin-top: 113px;
   background-size: cover;
 }
 
@@ -332,7 +333,7 @@ textarea {
 
 .container4 {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .card4 {
@@ -340,8 +341,18 @@ textarea {
   margin-bottom: 100px;
   width: 350px;
   height: 500px;
-  box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 0  70px 20px rgba(253, 252, 252, 0.26);
   perspective: 1000px;
+  position: relative;
+  right: 350px;
+}
+
+.phconnexion{
+  width: 1px;
+  height: 8px;
+  position: relative;
+  left: 50px;
+  bottom: 300px;
 }
 
 .inner-box {
@@ -358,15 +369,38 @@ textarea {
   height: 100%;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(rgba(6, 19, 158, 0.8), rgba(28, 1, 90, 0.8)),
+  background-image: linear-gradient(rgba(1, 43, 158, 0.8), rgba(90, 1, 86, 0.8)),
     url(../pages/cardBk.png);
   padding: 55px;
   box-sizing: border-box;
   backface-visibility: hidden;
+  transition: 1000ms;
 }
 
 .card-back {
   transform: rotateY(180deg);
+}
+
+.card-back span{
+  color: rgb(153, 184, 212);
+}
+
+.card-back h2 {
+  font-weight: normal;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f2f2f2;
+}
+
+#card.visible .card-front {
+  transform: rotateY(-180deg);
+  transition: 1000ms;
+}
+
+#card.visible .card-back {
+  transform: rotateY(0);
+  transition: 1000ms;
 }
 
 .card-front h2 {
@@ -411,15 +445,15 @@ button {
   cursor: pointer;
 }
 
-.card-front span{
-  color:rgb(153, 184, 212) ;
+.card-front span {
+  color: rgb(153, 184, 212);
 }
 
-.submit-btn{
+.submit-btn {
   position: relative;
 }
-.submit-btn::after{
-  content: '\27a4';
+.submit-btn::after {
+  content: "\27a4";
   color: #333;
   line-height: 32px;
   font-size: 17px;
@@ -429,10 +463,10 @@ button {
   background: #fff;
   position: absolute;
   right: -1px;
-  top:-1px;
+  top: -1px;
 }
 
-.card4 .btn{
+.card4 .btn {
   margin-top: 70px;
 }
 
@@ -443,4 +477,179 @@ button {
   text-align: center;
   font-size: 13px;
   margin-top: 8px;
+}
+
+
+/* Profile//////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+main {
+  width: 100%;
+  margin: 50px auto;
+
+  display: grid;
+  color: white;
+  grid-template-rows: 60px 100px 200px 60px;
+  grid-template-columns: repeat(3, 1fr) 150px;
+  grid-gap: 20px;
+}
+
+.div1 {
+  background: rgba(179, 220, 237, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 53%,
+    rgba(41, 184, 229, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(179, 220, 237, 1)),
+    color-stop(53%, rgba(41, 184, 229, 1)),
+    color-stop(100%, rgba(41, 184, 229, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 53%,
+    rgba(41, 184, 229, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 53%,
+    rgba(41, 184, 229, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 53%,
+    rgba(41, 184, 229, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 53%,
+    rgba(41, 184, 229, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#520013', endColorstr='#660020', GradientType=1 );
+  grid-column: 1/-1;
+
+  border-radius: 10px;
+}
+.div2 {
+  background: rgba(255, 255, 255, 1.0);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1.0), rgba(17, 83, 254, 1.0));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1.0), rgba(17, 83, 254, 1.0));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1.0), rgba(17, 83, 254, 1.0));
+  grid-row: 2/15;
+  border-radius: 10px;
+}
+
+.div2 h2 {
+  color: #000000;
+  font: italic 2em "Fira Sans", serif;
+  margin-left: 10px;
+  scroll-behavior: smooth;
+}
+
+.div2 a{
+  display: block;
+  justify-content: left;
+  align-items: center;
+  padding-bottom: 10px;
+  position: relative;
+  left: -50px;
+  font-size: 20px;
+  text-shadow: 2px 1px 3px #000000;
+
+}
+.div2 i{
+  margin-right: 10px;
+}
+.div3 {
+  grid-column: -4/5;
+  background-size: cover;
+  margin-top: 30px;
+}
+.div5 {
+  grid-row: 2/-3;
+  grid-column: -4/5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+margin-top: 30px;
+}
+
+.niveau {
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  color: rgb(255, 255, 255);
+  width: 30%;
+  height: 100px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  -webkit-box-shadow: 0px 4px 16px 1px #000000; 
+  box-shadow: 0px 4px 16px 1px #000000;
+  background: rgba(179, 220, 237, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 53%,
+    rgba(41, 184, 229, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(179, 220, 237, 1)),
+    color-stop(53%, rgba(41, 184, 229, 1)),
+    color-stop(100%, rgba(41, 184, 229, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 53%,
+    rgba(41, 184, 229, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 53%,
+    rgba(41, 184, 229, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 53%,
+    rgba(41, 184, 229, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 53%,
+    rgba(41, 184, 229, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#29b8e5', GradientType=1 );
+}
+.niveau h2 {
+  position: relative;
+  top: -10px;
+  text-shadow: 6px 2px 7px rgba(0, 0, 0, 0.82);
+}
+.niveau p {
+  position: relative;
+  top: -30px;
+  color: darkred;
+}
+.div6 {
+  background-color: #ffa502;
+  grid-column: 1/ 4;
+}
+.div7 {
+  background-color: #00d2d3;
+  grid-column: 1/-1;
+  margin-top: 400px;
 }

@@ -28,10 +28,7 @@ const Navbar = () => {
               <Link to="/contact">Contact</Link>
             </li>
             <li id="login">
-              <Link to="/inscription">Inscription</Link>
-            </li>
-            <li id="login">
-              <Link to="/connexion">Connexion</Link>
+              <Link to="/inscription">Connexion / Inscription</Link>
             </li>
           </ul>
           <div onClick={toggleHandler} className="toggle-btn">
