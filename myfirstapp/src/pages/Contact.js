@@ -1,5 +1,5 @@
 import React from "react";
-import "./Contact.css"
+import "./Contact.css";
 
 const Contact = () => {
   return (
@@ -30,7 +30,7 @@ const Contact = () => {
             </div>
             <div className="text">
               <h3>E-mail</h3>
-              <p>said19022018@gmail.com</p>
+              <p>said190295@gmail.com</p>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ const Contact = () => {
             </div>
             <div className="text">
               <h3>Facebook</h3>
-              <p>EyeTech</p>
+              <p>الخبير للهواتف النقالة</p>
             </div>
           </div>
         </div>

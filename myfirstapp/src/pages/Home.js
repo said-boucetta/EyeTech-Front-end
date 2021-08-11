@@ -5,7 +5,7 @@ import repair from "../pages/videoHome.mp4";
 import photoDebutants from "../pages/debutants.jpg";
 import photoPro from "../pages/pro.jpg";
 import photoSoft from "../pages/nand.jpg";
-import phLogin from "../pages/loginimg.png"
+import phLogin from "../pages/loginimg.png";
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -33,7 +33,7 @@ const Home = () => {
         <h1>Devenez un Pro technicien en réparation Smartphones</h1>
         <p>
           Vous voulez vous former à la réparation de smartphones! Vous êtes
-          débutants ou réparateurs professionnels de smartphones,nous vous
+          débutants ou réparateurs et vous voulez améliorer vos connaissances  de smartphones,nous vous
           proposons une formation 100% en ligne en réparation de téléphones
           mobiles.
         </p>
@@ -85,7 +85,7 @@ const Home = () => {
               </div>
               <div className="text">
                 <h3>E-mail</h3>
-                <p>said19022018@gmail.com</p>
+                <p>said190295@gmail.com</p>
               </div>
             </div>
 
@@ -105,7 +105,7 @@ const Home = () => {
               </div>
               <div className="text">
                 <h3>Facebook</h3>
-                <p>EyeTech</p>
+                <p>الخبير للهواتف النقالة</p>
               </div>
             </div>
           </div>
@@ -181,8 +181,8 @@ const Home = () => {
               <div className="bottom-text">
                 <div className="text">
                   Une formation complète dans le Hardware, spécialisé dans la
-                  microsoudure et la détection des pannes d'une manière
-                  scientifique des pannes complexes de l'Iphone.
+                  microsoudure et la détection des pannes complexes de l'Iphone
+                  d'une manière scientifique et profetionelle.
                 </div>
               </div>
             </div>
@@ -209,7 +209,7 @@ const Home = () => {
 
         <div className="container4">
           <div className="phconnexion">
-            <img className="logimg" src={phLogin}/>
+            <img className="logimg" src={phLogin} />
           </div>
           <div className="card4">
             <div className={`inner-box ${fliping ? "" : "visible"}`} id="card">
@@ -286,10 +286,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-
-
-        
       </div>
     </div>
   );

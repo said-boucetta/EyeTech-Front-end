@@ -7,7 +7,7 @@ import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
 import Inscription from "./pages/Inscription";
 import Connexion from "./pages/Connexion";
-
+import Video from "./pages/Video"
 function App() {
   return (
     <Router>
@@ -18,6 +18,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/inscription" component={Inscription} />
         <Route exact path="/Connexion" component={Connexion} />
+        <Route exact path="/video" component={Video} />
       </Switch>
     </Router>
   );
