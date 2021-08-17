@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import VideoPlayer from "react-video-js-player";
 import repair from "../pages/videoHome.mp4";

@@ -14,7 +14,7 @@ const Courses = () => {
           <div className="containerCard">
             <div className="card">
               <div className="img">
-                <img src={photoDebutants} />{" "}
+                <img src={photoDebutants} />
               </div>
               <div className="top-text">
                 <div className="name">Niveau 1</div>
