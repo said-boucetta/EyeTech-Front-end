@@ -1,35 +1,32 @@
-import React from 'react';
+import { useState, useEffect } from "react";
 import "./Videoother.css";
 import { Link, useRouteMatch } from "react-router-dom";
-
-export default function Videoother() {
-    let { url } = useRouteMatch();
-    return (
-<div className="videoothers">
-
-    <div className ="videolevels" >
-
-        <div className="videolevel1"> 
-            <Link to={`${url}level`} > <h1>Niveau 1</h1>  </Link>
+import ReactPlayer from "react-player";
+export default function Videoother({ setNiveau, selectedVideo }) {
+  let { url } = useRouteMatch();
+  return (
+    <div className="videoothers">
+      <div className="videolevels">
+        <div className="videolevel1">
+          <h1 onClick={() => setNiveau(1)}>Niveau 1</h1>{" "}
         </div>
 
         <div className="videolevel2">
-        <Link to={`${url}level2`} > <h1>Niveau 2</h1>  </Link>
+          <h1 onClick={() => setNiveau(2)}>Niveau 2</h1>{" "}
         </div>
 
         <div className="videolevel3">
-        <h1>Niveau 3</h1> 
+          <h1 onClick={() => setNiveau(3)}>Niveau 3</h1>
         </div>
-</div>
+      </div>
 
-        <div className="videotitlevideo">
-            <h2>Titre Video :</h2>
-        </div>
+      <div className="videotitlevideo">
+        <h2>Titre Video :{selectedVideo?.titre} </h2>
+      </div>
 
-        <div className="videocontainervideo">
-            <h2>Video</h2>
-        </div>
-
-</div>
-    )
-};
+      <div style={{ width: 500, height: 500 }}>
+        <ReactPlayer url={selectedVideo?.url} />
+      </div>
+    </div>
+  );
+}
