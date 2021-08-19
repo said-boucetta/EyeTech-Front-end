@@ -1,8 +1,11 @@
-.home{
-    flex: 4;
+.home {
+  flex: 4;
+  height: 100vh;
+  background-color: white;
 }
 
-.homeWidgets{
-    display: flex;
-    margin: 20px;
+.homeWidgets {
+  display: flex;
+  margin: 20px;
+  height: 80%;
 }

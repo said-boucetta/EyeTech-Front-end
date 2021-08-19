@@ -7,7 +7,7 @@ import { useState,useEffect } from "react";
 import axios from "axios"
 export default function UserList() {
   const [data, setData] = useState(userRows);
-  const [users,setUsers] = useState()
+  const [users,setUsers] = useState([])
   const handleDelete =async (id) => {
     const response = await axios.delete(`http://localhost:5000/api/user/${id}`)
     if(response.data){
@@ -26,7 +26,7 @@ export default function UserList() {
     getData()
   }, [])
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
+    { field: "id", headerName: "ID", width: 100 },
     {
       field: "pseudo",
       headerName: "Utilisateur",
